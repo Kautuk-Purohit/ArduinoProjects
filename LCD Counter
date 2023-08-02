@@ -1,0 +1,36 @@
+bool buttonPress;
+#include <LiquidCrystal.h> // initialize the library by associating any needed LCD interface pin with the arduino pin number it is connected to
+
+
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup() {
+ 
+  lcd.begin(16, 2); //columns, rows
+  lcd.display(); //display on
+  pinMode (8, OUTPUT);
+  if (buttonPress == LOW)
+ {
+   lcd.print ("Counter -->");
+ }
+}
+
+void loop() {    
+  buttonPress = digitalRead (8); //button reading from pin 8
+  
+  while (int buttonPressed = 1; buttonPressed <100; buttonPressed += 1)
+{
+  if (buttonPress == HIGH) 
+  {
+    lcd.clear();
+    lcd.print (buttonPressed);
+    delay (1000);
+    //buttonPress = digitalRead (8);
+  }
+  else
+  {
+    
+  }
+}
+}
