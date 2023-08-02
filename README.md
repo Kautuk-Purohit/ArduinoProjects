@@ -1,2 +1,2 @@
 # ArduinoProjects
-All arduino projects I have completed 
+Some Small Arduino Projects I Have Completed
